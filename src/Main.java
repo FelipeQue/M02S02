@@ -40,7 +40,9 @@ public class Main {
                     telaAlterarPaciente(scanner);
                     continue;
                 case 4:
-                    System.out.println("Você escolheu a opção 4.");
+                    System.out.println();
+                    System.out.println("Mostrar informações de paciente.");
+                    telaExibirPaciente(scanner);
                     continue;
                 case 5:
                     System.out.println("Você escolheu a opção 5.");
@@ -77,10 +79,10 @@ public class Main {
         paciente.altura = Double.parseDouble(scanner.next());
 
         System.out.print("Pressão sistólica: ");
-        paciente.peso = Integer.parseInt(scanner.next());
+        paciente.pressaoSistolica = Integer.parseInt(scanner.next());
 
         System.out.print("Pressão diastólica: ");
-        paciente.peso = Integer.parseInt(scanner.next());
+        paciente.pressaoDiastolica = Integer.parseInt(scanner.next());
 
         System.out.print("Frequência cardíaca: ");
         paciente.frequenciaCardiaca = Integer.parseInt(scanner.next());
@@ -121,6 +123,14 @@ public class Main {
         paciente.monitorar();
     }
 
+    // M02S02 Exercício 08: Exibir informações de paciente
+    private static void telaExibirPaciente(Scanner scanner) {
+        System.out.println("Qual o id da pessoa paciente que você deseja consultar?");
+        System.out.println("> ");
+
+        Paciente paciente = ListaPacientes.buscarPacienteId(Integer.parseInt(scanner.next()));
+        paciente.monitorar();
+    }
 
 
 
