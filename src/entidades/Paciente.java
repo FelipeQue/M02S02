@@ -1,9 +1,9 @@
-
-// M02S02 Exercício 01: criar classe Paciente
+package entidades;
 
 import java.util.ArrayList;
 import java.util.List;
 
+// M02S02 Exercício 01: criar classe Paciente
 public class Paciente {
 
     // Atributos

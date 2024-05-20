@@ -1,3 +1,7 @@
+package repositorio;
+
+import entidades.Paciente;
+
 import java.util.ArrayList;
 
 // M02S02 Exercício 02: lista de dados

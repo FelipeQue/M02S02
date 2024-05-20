@@ -1,4 +1,7 @@
 
+import entidades.Paciente;
+import repositorio.ListaPacientes;
+
 import java.util.Scanner;
 
 public class Main {
@@ -141,9 +144,19 @@ public class Main {
         System.out.println("Qual o id da pessoa paciente que realizou a atividade?");
         System.out.print("> ");
         Paciente paciente = ListaPacientes.buscarPacienteId(Integer.parseInt(scanner.next()));
+
+        // Consumir a quebra de linha pendente após o próximo inteiro:
+        scanner.nextLine();
+        // (Por que isso? Porque quero que seja possível colocar uma atividade com espaços.
+        // Utilizar apenas next() estava dando erro ao tentar digitar algo como "aula de yoga".
+        // Assim, recorri ao nextLine(), mas foi preciso acrescentar essa linha acima, pois o próximo
+        // nextLine() estava consumindo a quebra de linha pendente após a leitura do inteiro,
+        // resultando em uma entrada vazia para a atividade física.)
+
         System.out.println("Qual a atividade física que foi realizada?");
         System.out.print("> ");
-        paciente.registrarAtividade(scanner.next());
+        String atividade = scanner.nextLine();
+        paciente.registrarAtividade(atividade);
     }
 
     // M02S02 Exercício 10: Remover paciente
