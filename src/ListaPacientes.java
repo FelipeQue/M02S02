@@ -17,7 +17,7 @@ public class ListaPacientes {
     public static void listarPacientes(){
         System.out.println("Id - Nome");
         for (Paciente item : pacientes){
-            System.out.println(pacientes.indexOf(item) + ". " + item.nome);
+            System.out.println(pacientes.indexOf(item) + " - " + item.nome + ";");
         }
     }
 

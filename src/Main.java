@@ -31,7 +31,9 @@ public class Main {
                     telaCadastrarPaciente(scanner);
                     continue;
                 case 2:
-                    System.out.println("Você escolheu a opção 2.");
+                    System.out.println();
+                    System.out.println("Lista de pacientes.");
+                    telaListarPacientes();
                     continue;
                 case 3:
                     System.out.println("Você escolheu a opção 3.");
@@ -87,4 +89,11 @@ public class Main {
 
         ListaPacientes.adicionarPaciente(paciente);
     }
+
+    // M02S02 Exercício 06: Listar pacientes
+    private static void telaListarPacientes() {
+        ListaPacientes.listarPacientes();
+    }
+
+
 }
