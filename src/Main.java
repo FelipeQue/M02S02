@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,9 +11,10 @@ public class Main {
 
         System.out.println();
         while (true) {
+            System.out.println();
             System.out.println("""
                     O que deseja fazer?
-                    1 - Cadastrar uma nova pessoa paciente.
+                    1 - Cadastrar paciente.
                     2 - Listar pacientes.
                     3 - Alterar informações de paciente.
                     4 - Mostrar informações de paciente.
@@ -24,7 +26,9 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Você escolheu a opção 1.");
+                    System.out.println();
+                    System.out.println("Cadastrar paciente.");
+                    telaCadastrarPaciente(scanner);
                     continue;
                 case 2:
                     System.out.println("Você escolheu a opção 2.");
@@ -50,9 +54,37 @@ public class Main {
             break; // Este é o break referente ao while que engloba tudo;
         }
         scanner.close();
+    }
 
+    // M02S02 Exercício 05: Cadastro de paciente
+    private static void telaCadastrarPaciente(Scanner scanner){
+        Paciente paciente = new Paciente();
+        System.out.println("Insira os dados de paciente:");
 
+        System.out.print("Nome: ");
+        paciente.nome = scanner.next();
 
+        System.out.print("Idade: ");
+        paciente.idade = Integer.parseInt(scanner.next());
 
+        System.out.print("Peso: ");
+        paciente.peso = Double.parseDouble(scanner.next());
+
+        System.out.print("Altura: ");
+        paciente.altura = Double.parseDouble(scanner.next());
+
+        System.out.print("Pressão sistólica: ");
+        paciente.peso = Integer.parseInt(scanner.next());
+
+        System.out.print("Pressão diastólica: ");
+        paciente.peso = Integer.parseInt(scanner.next());
+
+        System.out.print("Frequência cardíaca: ");
+        paciente.frequenciaCardiaca = Integer.parseInt(scanner.next());
+
+        System.out.print("Tipo de dieta alimentar: ");
+        paciente.dietaAlimentar = scanner.next();
+
+        ListaPacientes.adicionarPaciente(paciente);
     }
 }

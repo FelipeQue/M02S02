@@ -11,8 +11,9 @@ public class Paciente {
     public int idade;
     public double peso;
     public double altura;
-    public double pressaoArterial;
-    public double frequenciaCardiaca;
+    public int pressaoSistolica;
+    public int pressaoDiastolica;
+    public int frequenciaCardiaca;
     public String dietaAlimentar;
     public List<String> atividadesFisicas = new ArrayList<>();
 
@@ -30,8 +31,8 @@ public class Paciente {
                 "Idade: " + this.idade + "\n" +
                 "Peso: " + this.peso + "\n" +
                 "Altura: " + this.altura + "\n" +
-                "Pressão arterial: " + this.pressaoArterial + "\n" +
-                "Frequência cardíaca: " + this.frequenciaCardiaca + "\n" +
+                "Pressão arterial: " + this.pressaoSistolica + " por " + this.pressaoDiastolica + "\n" +
+                "Frequência cardíaca: " + this.frequenciaCardiaca + " bpm." + "\n" +
                 "Dieta alimentar: " + this.dietaAlimentar + "\n" +
                 "Atividades físicas: " + this.atividadesFisicas + "\n" +
                 "IMC: " + this.calcularImc());
