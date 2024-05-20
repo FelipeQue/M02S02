@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
 
 public class Main {
@@ -101,9 +100,8 @@ public class Main {
     private static void telaAlterarPaciente(Scanner scanner) {
         System.out.println("Qual o id da pessoa paciente que você deseja editar?");
         System.out.println("> ");
-        int id = Integer.parseInt(scanner.next());
 
-        Paciente paciente = ListaPacientes.buscarPacienteId(id);
+        Paciente paciente = ListaPacientes.buscarPacienteId(Integer.parseInt(scanner.next()));
 
         System.out.println("Atualize as informações:");
         System.out.print("Peso: ");
