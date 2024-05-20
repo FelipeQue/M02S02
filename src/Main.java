@@ -45,7 +45,9 @@ public class Main {
                     telaExibirPaciente(scanner);
                     continue;
                 case 5:
-                    System.out.println("Você escolheu a opção 5.");
+                    System.out.println();
+                    System.out.println("Registrar atividade física para paciente.");
+                    telaRegistrarAtividade(scanner);
                     continue;
                 case 6:
                     System.out.println("Você escolheu a opção 6.");
@@ -56,7 +58,7 @@ public class Main {
                 default:
                     continue;
             }
-            break; // Este é o break referente ao while que engloba tudo;
+            break; // Este é o break referente ao while;
         }
         scanner.close();
     }
@@ -126,12 +128,21 @@ public class Main {
     // M02S02 Exercício 08: Exibir informações de paciente
     private static void telaExibirPaciente(Scanner scanner) {
         System.out.println("Qual o id da pessoa paciente que você deseja consultar?");
-        System.out.println("> ");
+        System.out.print("> ");
 
         Paciente paciente = ListaPacientes.buscarPacienteId(Integer.parseInt(scanner.next()));
         paciente.monitorar();
     }
 
+    // M02S02 Exercício 09: Registrar atividade física
+    private static void telaRegistrarAtividade(Scanner scanner) {
+        System.out.println("Qual o id da pessoa paciente que realizou a atividade?");
+        System.out.print("> ");
+        Paciente paciente = ListaPacientes.buscarPacienteId(Integer.parseInt(scanner.next()));
+        System.out.println("Qual a atividade física que foi realizada?");
+        System.out.print("> ");
+        paciente.registrarAtividade(scanner.next());
+    }
 
 
 
