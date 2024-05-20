@@ -12,11 +12,11 @@ public class Main {
         while (true) {
             System.out.println("""
                     O que deseja fazer?
-                    1 - Cadastrar um novo paciente.
-                    2 - Listar todos os pacientes.
-                    3 - Alterar informações do paciente.
-                    4 - Mostrar informações de um paciente.
-                    5 - Registrar atividade física para um paciente.
+                    1 - Cadastrar uma nova pessoa paciente.
+                    2 - Listar pacientes.
+                    3 - Alterar informações de paciente.
+                    4 - Mostrar informações de paciente.
+                    5 - Registrar atividade física para paciente.
                     6 - Remover paciente.
                     7 - Encerrar programa.""");
             System.out.print("> ");
