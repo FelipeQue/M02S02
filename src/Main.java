@@ -50,7 +50,9 @@ public class Main {
                     telaRegistrarAtividade(scanner);
                     continue;
                 case 6:
-                    System.out.println("Você escolheu a opção 6.");
+                    System.out.println();
+                    System.out.println("Remover paciente.");
+                    telaRemoverPaciente(scanner);
                     continue;
                 case 7:
                     System.out.println("Você escolheu SAIR.");
@@ -142,6 +144,14 @@ public class Main {
         System.out.println("Qual a atividade física que foi realizada?");
         System.out.print("> ");
         paciente.registrarAtividade(scanner.next());
+    }
+
+    // M02S02 Exercício 10: Remover paciente
+    private static void telaRemoverPaciente(Scanner scanner) {
+        System.out.println("Qual o id do registro de paciente a ser removido?");
+        System.out.print("> ");
+        ListaPacientes.removerPaciente(Integer.parseInt(scanner.next()));
+        System.out.print("Registro de paciente removido com sucesso!");
     }
 
 
