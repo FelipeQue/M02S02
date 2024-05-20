@@ -36,7 +36,9 @@ public class Main {
                     telaListarPacientes();
                     continue;
                 case 3:
-                    System.out.println("Você escolheu a opção 3.");
+                    System.out.println();
+                    System.out.println("Alterar informações de paciente.");
+                    telaAlterarPaciente(scanner);
                     continue;
                 case 4:
                     System.out.println("Você escolheu a opção 4.");
@@ -94,6 +96,35 @@ public class Main {
     private static void telaListarPacientes() {
         ListaPacientes.listarPacientes();
     }
+
+    // M02S02 Exercício 07: Alterar pacientes
+    private static void telaAlterarPaciente(Scanner scanner) {
+        System.out.println("Qual o id da pessoa paciente que você deseja editar?");
+        System.out.println("> ");
+        int id = Integer.parseInt(scanner.next());
+
+        Paciente paciente = ListaPacientes.buscarPacienteId(id);
+
+        System.out.println("Atualize as informações:");
+        System.out.print("Peso: ");
+        paciente.peso = Double.parseDouble(scanner.next());
+        System.out.print("Altura: ");
+        paciente.altura = Double.parseDouble(scanner.next());
+        System.out.print("Pressão sistólica: ");
+        paciente.pressaoSistolica = Integer.parseInt(scanner.next());
+        System.out.print("Pressão diastólica: ");
+        paciente.pressaoDiastolica = Integer.parseInt(scanner.next());
+        System.out.print("Frequência cardíaca: ");
+        paciente.frequenciaCardiaca = Integer.parseInt(scanner.next());
+        System.out.print("Dieta alimentar: ");
+        paciente.dietaAlimentar = scanner.next();
+
+        System.out.println("Informações atualizadas.");
+        paciente.monitorar();
+    }
+
+
+
 
 
 }
